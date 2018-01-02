@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 ### SPREE EXTENSIONS ###
-gem 'spree_auth_devise', '~> 3.2'
-gem 'spree', '~> 3.2.0'
+gem 'spree_auth_devise', '~> 3.3'
+gem 'spree', '~> 3.3'
 
 ### RUBY GEMS ###
-gem 'datashift', github: 'vinsol-spree-contrib/datashift', branch: '3-2-stable'
-gem 'datashift_spree', github: 'vinsol-spree-contrib/datashift_spree', branch: '3-2-stable'
+gem 'datashift', path: '../../Gem/datashift'
+gem 'datashift_spree', path: '../../Gem/datashift_spree'
 
 group :test do
   gem 'rails-controller-testing'

@@ -31,13 +31,10 @@ class Spree::Admin::ProductImportsController < Spree::Admin::BaseController
   end
 
   def user_csv_import
-    begin
+      binding.pry
       loader = DataShift::SpreeEcom::ProductLoader.new(params[:csv_file].path, @options)
       loader.run
       flash[:success] = Spree.t(:successfull_import, scope: :datashift_import, resource: Spree::Product.name.demodulize)
-    rescue => e
-      flash[:error] = e.message
-    end
     redirect_to admin_product_imports_path
   end
 
